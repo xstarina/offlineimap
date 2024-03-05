@@ -10,7 +10,7 @@ OfflineIMAP is software that downloads your email mailbox(es) as local Maildirs.
 ## Usage example
 ```
 mkdir -p offlineimap/{home,repo}
-touch offlineimap/offlineimap.conf
+wget -O offlineimap/offlineimap.conf https://raw.githubusercontent.com/OfflineIMAP/offlineimap/master/offlineimap.conf
 sudo chown -R 100 offlineimap
 
 docker run --rm \
