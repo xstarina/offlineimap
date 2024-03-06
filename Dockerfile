@@ -1,7 +1,8 @@
 FROM alpine:edge
 
 RUN set -ex; \
-    apk add --update --no-cache offlineimap ca-certificates; \
+    apk add --update --no-cache offlineimap ca-certificates tzdata; \
+    update-ca-certificates; \
     adduser -D -S imapuser; \
     mkdir -p /home/imapuser/.offlineimap; \
     chown imapuser:nogroup /home/imapuser/.offlineimap;
